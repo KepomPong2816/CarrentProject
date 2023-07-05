@@ -1,0 +1,18 @@
+INFO - 2023-06-28 09:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 09:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 09:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 09:36:31 --> Cannot redeclare App\Controllers\Home::about()
+in APPPATH\Controllers\Home.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-28 09:36:45 --> Undefined global variable $_SESSION
+in APPPATH\Views\container.php on line 21.
+ 1 APPPATH\Views\container.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\Users\\A C E R\\Downloads\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\A C E R\\Downloads\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('container', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('container')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->landing_page()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\A C E R\\Downloads\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')

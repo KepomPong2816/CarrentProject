@@ -1,0 +1,57 @@
+#pinggiran {
+  background-color: blue;
+  border: 2px blue solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#buatborder {
+  border: 2px blue solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nav-item a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .nav-item a:hover {
+    border-bottom: 3px solid red;
+  }
+  
+  .nav-item a.active {
+    border-bottom: 3px solid red;
+  }
+
+/* Header */
+header {
+    border-color: black;
+}
+
+/* caraosel */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-item {
+    height: 500px;
+    background-color: #ccc;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.kaki {
+    margin-top: 30px;
+    bottom: 0px;
+}

@@ -1,0 +1,317 @@
+INFO - 2023-07-04 01:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-04 01:36:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'fauzi', 3306, '', 0)
+#1 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Models\User.php(25): CodeIgniter\BaseModel->first()
+#7 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+#8 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+#9 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+#10 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Models\User.php(25): CodeIgniter\BaseModel->first()
+#6 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+#7 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+#8 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+#9 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4...')
+#12 {main}
+CRITICAL - 2023-07-04 01:36:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 01:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-04 01:37:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'fauzi', 3306, '', 0)
+#1 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Models\User.php(25): CodeIgniter\BaseModel->first()
+#7 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+#8 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+#9 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+#10 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Models\User.php(25): CodeIgniter\BaseModel->first()
+#6 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\app\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+#7 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+#8 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+#9 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\codeigniter4-framework-v4.3.5-0-gb41bca4\CarRent\system\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4...')
+#12 {main}
+CRITICAL - 2023-07-04 01:37:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Signin.php(15): App\Models\User->getUserByEmail('oki@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Signin->login_auth()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 01:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 01:37:51 --> Undefined variable $session
+in APPPATH\Views\container.php on line 9.
+ 1 APPPATH\Views\container.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('container', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('container')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->landing_page()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 01:39:02 --> Unclosed '[' does not match ')'
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 01:39:03 --> Unclosed '[' does not match ')'
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 01:39:04 --> Unclosed '[' does not match ')'
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 01:39:05 --> Unclosed '[' does not match ')'
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 01:39:10 --> Unclosed '[' does not match ')'
+in APPPATH\Controllers\Home.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 01:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 01:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 02:11:17 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->landing_page()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 02:11:42 --> Undefined variable $session
+in APPPATH\Views\container.php on line 9.
+ 1 APPPATH\Views\container.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('container', [], true)
+ 5 APPPATH\Controllers\Home.php(50): view('container')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->landing_page()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 02:11:57 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+CRITICAL - 2023-07-04 02:12:24 --> Undefined variable $session
+in APPPATH\Views\form_login.php on line 33.
+ 1 APPPATH\Views\form_login.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\form_login.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\form_login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('form_login', [], true)
+ 5 APPPATH\Controllers\Home.php(37): view('form_login')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 02:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 02:33:56 --> Undefined variable $id
+in APPPATH\Views\container.php on line 11.
+ 1 APPPATH\Views\container.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\app\\Views\\container.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('container', [], true)
+ 5 APPPATH\Controllers\Home.php(47): view('container')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->landing_page()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 02:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 02:36:14 --> Invalid file: "landing_page.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landing_page.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('landing_page', [], true)
+ 3 APPPATH\Controllers\Home.php(26): view('landing_page', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 02:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 02:36:29 --> Invalid file: "landing_page.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landing_page.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('landing_page', [], true)
+ 3 APPPATH\Controllers\Home.php(26): view('landing_page', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 02:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 02:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 03:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 03:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 09:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 09:11:20 --> Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(16): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 09:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-04 09:11:21 --> Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(16): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\codeigniter4-framework-v4.3.5-0-gb41bca4\\CarRent\\public\\index.php')
+INFO - 2023-07-04 09:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 09:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 09:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 09:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 10:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 10:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 10:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 10:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 10:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
