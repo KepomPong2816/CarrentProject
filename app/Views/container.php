@@ -26,7 +26,7 @@
         </div>
         <!-- List Mobil -->
         <div class="row row-cols-1 row-cols-md-2 mb-2 m-2">
-            <!-- FIlter -->
+            <!-- FIlter grid-->
             <div class="col-3">
                 <div class="card mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3">
