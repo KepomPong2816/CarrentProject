@@ -46,4 +46,16 @@ class Home extends BaseController
     {
         return view('container');
     }
+        public function sewa()
+    {
+        return view('sewa_mobil');
+    }
+    public function pesan()
+    {
+        return view('pesan_mobil');
+    }
+    public function bayar()
+    {
+        return view('bayar_pesanan');
+    }
 }
