@@ -55,3 +55,21 @@ img {
     margin-top: 30px;
     bottom: 0px;
 }
+/* pesan_tiket */
+.garis{
+  height: 100%;
+  width: 2px;
+  background-color: #5F94E2;
+}
+#home-tab{
+  margin-left: 10pt;
+  margin-right: 240pt;
+  }
+  #profile-tab{
+    margin-left: 10pt;
+    margin-right: 254pt;
+    }
+    #messages-tab{
+      margin-left: 10pt;
+      margin-right: 256pt;
+      }

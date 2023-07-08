@@ -11,7 +11,7 @@
         <?php include(APPPATH . 'Views/banner.php'); ?>
 
         
-
+        <?php include(APPPATH . 'Views/pesan_tiket.php'); ?>
         <?php include(APPPATH . 'Views/konten.php'); ?>
         <?php include(APPPATH . 'Views/spatial/footer.php'); ?>
     </main>
