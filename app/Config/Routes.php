@@ -36,6 +36,10 @@ $routes->post('/auth/login', 'Signin::login_auth'); //login_auth
 $routes->post('/auth/reg', 'Signup::reg_auth'); //sighup_auth  
 $routes->get('/container', 'Home::home'); 
 
+$routes->get('/sewa_mobil', 'Home::sewa'); //buka tes
+$routes->get('/pesan_mobil', 'Home::pesan'); //buka pesan_mobil
+$routes->get('/bayar_pesanan', 'Home::bayar');//buka bayar_pesanan
+
 $routes->get('/logout', 'Login::logout'); //logout
 
 /*
