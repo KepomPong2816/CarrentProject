@@ -9,13 +9,22 @@ class Signup extends Controller
     {
         $model = new UserReg;
 
+        $plainPassword = $this->request->getPost("password");
+        $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
+
+
+
         $data = array(
             'email' => $this->request->getPost("email"),
-            'password' => $this->request->getPost("password")
+            'password' => $hashedPassword,
+            'level' => '0'
         );
         $f2a = $this->request->getPost("repassword");
+        $hashedPassword2 = password_hash($f2a, PASSWORD_DEFAULT);
 
-        if ($data['password'] == $f2a) {    
+        // print_r($hashedPassword2);
+
+        if ($data['password'] == $hashedPassword) {    
             $model->userdata($data); //fungsi dari app/Models/UserReg::userdata
             echo '<script>
                 alert("Selamat! Berhasil Menambah Data");
