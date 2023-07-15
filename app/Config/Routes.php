@@ -35,12 +35,16 @@ $routes->get('/about', 'Home::about');
 $routes->post('/auth/login', 'Signin::login_auth'); //login_auth
 $routes->post('/auth/reg', 'Signup::reg_auth'); //sighup_auth  
 $routes->get('/container', 'Home::home'); 
+$routes->get('admin/index', 'Admin::index'); 
 
 $routes->get('/sewa_mobil', 'Home::sewa'); //buka tes
 $routes->get('/pesan_mobil', 'Home::pesan'); //buka pesan_mobil
 $routes->get('/bayar_pesanan', 'Home::bayar');//buka bayar_pesanan
+$routes->get('Admin/form_tambah_kendaraan', 'Admin::form_tambah_kendaraan');//buka form tambah kendaraan
+$routes->get('Admin/form_sopir', 'Admin::form_sopir');//buka halaman sopir
+$routes->get('Admin/tables', 'Admin::tables');//buka halaman sopir
 
-$routes->get('/logout', 'Login::logout'); //logout
+$routes->get('/logout', 'Signin::logout'); //logout
 
 /*
  * --------------------------------------------------------------------
