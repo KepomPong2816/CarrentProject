@@ -13,5 +13,5 @@ class UserReg extends Model
         return $builder->insert($data);
     }
     protected $primaryKey = 'id'; // Primary key tabel pengguna
-    protected $allowedFields = ['email','password']; // Kolom yang dapat diisi pada tabel pengguna
+    protected $allowedFields = ['email','password', 'level']; // Kolom yang dapat diisi pada tabel pengguna
 }
